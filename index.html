@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern DigiGrow | Premium Digital Growth for Interior Designers</title>
+    <meta name="description"
+        content="Modern DigiGrow helps interior designers worldwide grow their business with high-converting websites, strategic content, and professional social media management.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* BASE STYLES */
+        :root {
+            --primary-blue: #0052FF;
+            --primary-teal: #00BFA5;
+            --accent-orange: #FF6D00;
+            --text-black: #121212;
+            --text-gray: #4A4A4A;
+            --bg-light: #FFFFFF;
+            --bg-alt: #F8FAFC;
+            --glass-bg: rgba(255, 255, 255, 0.8);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-black);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography Utilities */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0041CC;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 82, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-orange {
+            background-color: var(--accent-orange);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background-color: #E65100;
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 6px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero General */
+        .hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at top right, rgba(0, 191, 165, 0.05), transparent),
+                radial-gradient(circle at bottom left, rgba(0, 82, 255, 0.05), transparent);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .hero-visual {
+            margin-top: 80px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-hover);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-visual img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-head h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-head p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 82, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+        }
+
+        /* Service Specific Table Detail Style */
+        .service-detail {
+            padding: 120px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-detail:nth-child(even) {
+            background-color: var(--bg-alt);
+        }
+
+        .service-row {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .service-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-img {
+            flex: 1;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .service-img img {
+            width: 100%;
+            display: block;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        .service-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            margin: 32px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feature-item i {
+            color: var(--primary-teal);
+            margin-top: 5px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-item:hover .portfolio-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background-color: var(--bg-alt);
+        }
+
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .problem-item {
+            display: flex;
+            gap: 16px;
+        }
+
+        .problem-item i {
+            color: var(--accent-orange);
+            font-size: 1.2rem;
+        }
+
+        /* Blog Specific Styles */
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition-smooth);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .blog-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-body {
+            padding: 30px;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(0, 82, 255, 0.1);
+            color: var(--primary-blue);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-black);
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        /* Contact Specific Styles */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            padding: 80px 0;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-method {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 191, 165, 0.1);
+            color: var(--primary-teal);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: var(--bg-alt);
+            padding: 50px;
+            border-radius: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        /* CTA Section */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+            border-radius: 32px;
+            padding: 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-banner h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 0 40px;
+            background: var(--text-black);
+            color: white;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            opacity: 0.7;
+        }
+
+        .footer-col ul li a:hover {
+            opacity: 1;
+            color: var(--primary-teal);
+        }
+
+        .footer-bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-row {
+                flex-direction: column !important;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">
+                <div class="logo-icon"></div>
+                Modern DigiGrow
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">Connect Today</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Websites That Help Interior Designers <span class="text-gradient">Attract High-Quality Clients</span>
+            </h1>
+            <p>Modern DigiGrow builds powerful websites and digital systems that help interior designers showcase their
+                work, attract ideal clients, and grow their business globally.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Connect With Modern DigiGrow Today</a>
+                <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/images/hero.png" alt="Modern interior design marketing dashboard">
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-head">
+                <h2>The Challenges of Growing an Interior Design Business</h2>
+                <p>Scaling a creative studio requires more than just talent. We help you overcome common digital
+                    roadblocks.</p>
+            </div>
+            <div class="problem-list">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-times-circle"></i></div>
+                    <h3>No Professional Presence</h3>
+                    <p>Relying on Instagram alone isn't enough to build authority and trust with high-end clients.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-eye-slash"></i></div>
+                    <h3>Poor Online Visibility</h3>
+                    <p>Beautiful projects mean nothing if they aren't appearing in Google searches by your ideal
+                        clients.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line-down"></i></div>
+                    <h3>Inconsistent Social Media</h3>
+                    <p>Struggling to find the time to post consistently while managing complex design projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services">
+        <div class="container">
+            <div class="section-head">
+                <h2>Specialized Digital Services</h2>
+                <p>We provide the tools you need to grow your studio's digital footprint.</p>
+            </div>
+
+            <!-- Detailed Service Row 1 -->
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-text">
+                        <span
+                            style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase;">Development</span>
+                        <h2>Website Design & Development</h2>
+                        <p>Your website is your digital storefront. We build high-performance, conversion-focused
+                            websites that showcase your interior design portfolio in the best light possible.</p>
+                        <div class="feature-list">
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>High-End Portfolio Displays:</strong> Experience-driven galleries that let
+                                    your work shine.</div>
+                            </div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>Conversion-Optimized Layouts:</strong> Strategically placed CTAs to turn
+                                    browsers into inquiries.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="assets/images/project1.png" alt="Website Design">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Service Row 2 -->
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-text">
+                        <span style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase;">SEO &
+                            Copy</span>
+                        <h2>Content Writing & SEO</h2>
+                        <p>A beautiful website needs compelling words to match. Our specialist writers create content
+                            that reflects your brand's voice and boosts your search engine rankings.</p>
+                        <div class="feature-list">
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>Brand Storytelling:</strong> We help you articulate your unique design
+                                    philosophy.</div>
+                            </div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>SEO-Focused Blog Articles:</strong> Driving organic traffic by answering
+                                    common client questions.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="assets/images/project2.png" alt="Content Writing">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Service Row 3 -->
+            <div class="service-detail">
+                <div class="service-row">
+                    <div class="service-text">
+                        <span
+                            style="color: var(--primary-blue); font-weight: 700; text-transform: uppercase;">Growth</span>
+                        <h2>Social Media Management</h2>
+                        <p>Focus on your designs while we handle your digital presence. We manage your social platforms
+                            to build authority and keep your studio top-of-mind.</p>
+                        <div class="feature-list">
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>Strategic Content Calendars:</strong> Consistent posting schedules tailored
+                                    to your audience.</div>
+                            </div>
+                            <div class="feature-item"><i class="fas fa-check-circle"></i>
+                                <div><strong>Visual Curation:</strong> Ensuring your social feed is a premium extension
+                                    of your brand.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-img">
+                        <img src="assets/images/project3.png" alt="Social Media">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="background-color: var(--bg-alt);">
+        <div class="container">
+            <div class="section-head">
+                <h2>Expertise Built for the Design Industry</h2>
+                <p>We are a specialized digital agency dedicated to elevating the online presence of interior designers.
+                </p>
+            </div>
+            <div class="card-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 60px;">
+                <div>
+                    <h3>Our Mission</h3>
+                    <p style="margin-bottom: 20px;">At Modern DigiGrow, our mission is to help interior designers grow
+                        through sophisticated, modern digital strategies that match the beauty of their physical work.
+                    </p>
+                    <div
+                        style="background: white; padding: 30px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
+                        <p style="font-style: italic; font-weight: 500;">"We bridge the gap between design excellence
+                            and digital visibility, ensuring your talent is seen by the right people."</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Our Unique Approach</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item"><i class="fas fa-star"></i>
+                            <div><strong>Strategy First:</strong> We analyze your market and goals before we build.
+                            </div>
+                        </li>
+                        <li class="feature-item"><i class="fas fa-star"></i>
+                            <div><strong>Design with Purpose:</strong> Every element is placed with conversion in mind.
+                            </div>
+                        </li>
+                        <li class="feature-item"><i class="fas fa-star"></i>
+                            <div><strong>Growth Execution:</strong> Constant optimization for long-term search
+                                visibility.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-head">
+                <h2>Featured Projects</h2>
+                <p>Explore recent collaborations where we've combined luxury aesthetics with digital performance.</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="assets/images/project1.png" alt="Luxury Residence Website">
+                    <div class="portfolio-info">
+                        <h3>Vanguard Luxury Spaces</h3>
+                        <p>Custom High-End Portfolio Website</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/images/project2.png" alt="Minimalist Studio Website">
+                    <div class="portfolio-info">
+                        <h3>Aether Interiors</h3>
+                        <p>Minimalist Design Studio Platform</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/images/project3.png" alt="Eco-friendly Design Site">
+                    <div class="portfolio-info">
+                        <h3>EcoDwell Consult</h3>
+                        <p>Sustainable Living Digital Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" style="background-color: var(--bg-alt);">
+        <div class="container">
+            <div class="section-head">
+                <h2>Digital Marketing Insights</h2>
+                <p>Practical advice and industry trends to help you navigate the digital landscape.</p>
+            </div>
+            <div class="card-grid">
+                <article class="blog-card">
+                    <div class="blog-img"><img src="assets/images/project1.png" alt="Website"></div>
+                    <div class="blog-body">
+                        <span class="blog-tag">Strategy</span>
+                        <h3 class="blog-title">Why Interior Designers Need a Professional Website</h3>
+                        <p>Discover why relying solely on social media is a risk for your long-term authority.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img"><img src="assets/images/project2.png" alt="Clients"></div>
+                    <div class="blog-body">
+                        <span class="blog-tag">Marketing</span>
+                        <h3 class="blog-title">How Interior Designers Can Get Clients Online</h3>
+                        <p>A comprehensive guide on leveraging SEO and local search to attract high-quality leads.</p>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-img"><img src="assets/images/project3.png" alt="Social Media"></div>
+                    <div class="blog-body">
+                        <span class="blog-tag">Social Media</span>
+                        <h3 class="blog-title">Social Media Marketing for Interior Designers</h3>
+                        <p>Learn how to curate a stunning Instagram feed that connects with potential clients.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let's Build Your Digital Presence</h2>
+                    <p style="margin-bottom: 30px;">Ready to attract ideal clients? Fill out the form or reach out
+                        directly.</p>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@moderndigigrow.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>Connect with a Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#">
+                        <div class="form-group"><label>Full Name</label><input type="text" placeholder="John Doe"></div>
+                        <div class="form-group"><label>Work Email</label><input type="email"
+                                placeholder="john@designstudio.com"></div>
+                        <div class="form-group">
+                            <label>Service Interested In</label>
+                            <select>
+                                <option>Website Design & Development</option>
+                                <option>Content Writing & SEO</option>
+                                <option>Social Media Management</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label>Project Details</label><textarea
+                                placeholder="Tell us about your goals..."></textarea></div>
+                        <button class="btn btn-orange" style="width: 100%; padding: 18px;">Start Your Project</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section>
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Ready To Grow Your Interior Design Business Online?</h2>
+                <p>Work with Modern DigiGrow to build a professional digital presence that attracts more clients and
+                    grows your brand.</p>
+                <a href="#contact" class="btn btn-orange" style="padding: 18px 40px; font-size: 1.2rem;">Get Started
+                    Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color: white; margin-bottom: 24px;">
+                        <div class="logo-icon"></div>Modern DigiGrow
+                    </a>
+                    <p style="opacity: 0.7;">Helping interior designers worldwide grow their business with
+                        high-converting websites.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Web Design</a></li>
+                        <li><a href="#services">Content Writing</a></li>
+                        <li><a href="#services">Social Media</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@moderndigigrow.com">hello@moderndigigrow.com</a></li>
+                        <li><a href="#">WhatsApp Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Modern DigiGrow. All rights reserved. Designed for Interior Designers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Sticky Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.padding = '15px 0';
+                nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.padding = '20px 0';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Reveal Animations on Scroll
+        const revealElements = document.querySelectorAll('.card, .portfolio-item, .service-detail, .cta-banner');
+
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.9;
+
+            revealElements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+
+                if (elTop < triggerBottom) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Initial setup for reveal animations
+        revealElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Trigger once on load
+
+        console.log('Modern DigiGrow Single-File Experience Loaded Successfully.');
+    </script>
+</body>
+
+</html>
